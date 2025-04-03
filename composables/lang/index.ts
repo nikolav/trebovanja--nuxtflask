@@ -1,0 +1,1 @@
+export { useFetchTranslationApi } from "./useFetchTranslationApi";

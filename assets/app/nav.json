@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "$iconFactory",
+    "title": "",
+    "size": "1.44rem",
+    "to": "app"
+  },
+  {
+    "icon": "mdi:account-multiple",
+    "title": "Tim",
+    "size": "1.92rem",
+    "to": "tim"
+  },
+  {
+    "icon": "ion:ios-cube",
+    "title": "Aktiva",
+    "size": "1.81rem",
+    "to": "aktiva"
+  },
+  {
+    "icon": "mingcute:task-2-fill",
+    "title": "Teren",
+    "size": "1.71rem",
+    "to": "teren"
+  },
+  {
+    "icon": "basil:headset-solid",
+    "title": "Veza",
+    "size": "1.78rem",
+    "to": "veza"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "message": {
+    "about": "about",
+    "hello": "hello",
+    "hello2": "@.capitalize:message.hello",
+    "apple": "apples | {n} apple | {n} apples",
+    "welcome": "welcome",
+    "hellouser": "Hello, {user}!",
+    "homeAddress": "home address"
+  }
+}
