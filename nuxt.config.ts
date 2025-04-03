@@ -520,6 +520,26 @@ export default defineNuxtConfig({
         dir: "./assets/icons-local",
       },
     ],
+    clientBundle: {
+      icons: [
+        "logos:nuxt-icon",
+        "tabler:brand-github-filled",
+        "streamline:chat-two-bubbles-oval",
+        "material-symbols:location-on",
+        "ri:user-line",
+      ],
+      // scan all components in the project and include icons
+      scan: true,
+      // include all custom collections in the client bundle
+      includeCustomCollections: true,
+      // guard for uncompressed bundle size, will fail the build if exceed
+      // sizeLimitKb: 256,
+    },
+
+    // // scan all components in the project and include icons
+    // scan: true,
+    // include all custom collections in the client bundle
+    // includeCustomCollections: true,
   },
 
   colorMode: {

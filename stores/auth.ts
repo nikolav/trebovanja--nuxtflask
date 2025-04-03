@@ -179,8 +179,9 @@ export const useStoreApiAuth = defineStore("auth", () => {
         onResponse: async ({ response }) => {
           if (response.ok) {
             // logout success, cache cleared server side,
-            //  set token invalid
-            token$.value = "";
+            //  set token invalid/default
+            // token$.value = "";
+            token$.value = TOKEN_DEFAULT;
             pc.successful();
 
             // clear fb auth

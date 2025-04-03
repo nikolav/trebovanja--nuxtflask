@@ -13,6 +13,7 @@ import {
   URL_PASSWORD_RESET_ACTION,
   CATEGORY_KEY_ASSETS_prefix,
   DEFAULT_NO_IMAGE_AVAILABLE,
+  TOKEN_DEFAULT,
 } from "@/config";
 
 const themeDark = "dark";
@@ -143,7 +144,8 @@ export default defineAppConfig({
       KEY_ACCESS_TOKEN: ":sEe5xYuTL4q",
       KEY_USEFETCH_AUTHDATA: "oDgSc6Xp4kU",
       authDataFields: ["id", "email"],
-      initial: () => "",
+      // initial: () => "",
+      initial: () => TOKEN_DEFAULT,
       authHeaders: (token: string, additional?: Record<string, any>) => ({
         ...(token
           ? {
