@@ -19,6 +19,7 @@ const themeDark = "dark";
 const themeLight = "light";
 
 export default defineAppConfig({
+  APP_NAME: "NUXTAPP",
   ADMIN_EMAIL: "admin@nikolav.rs",
   DEBUG: true !== PRODUCTION$,
   APP_USER_DEFAULT: {

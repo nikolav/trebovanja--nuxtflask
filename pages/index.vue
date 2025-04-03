@@ -20,7 +20,7 @@ const { status: statusApollo } = useQueryApolloStatus();
 // ##watch
 // ##hooks:lifecycle
 // ##head
-useHead({ title: "--index" });
+useHead({ title: "🏡👋" });
 
 // @@eos
 </script>

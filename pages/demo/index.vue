@@ -4,6 +4,7 @@ definePageMeta({
   layout: "app-default",
   // middleware: "access-debug",
 });
+useHead({ title: "demo" });
 
 // @@eos
 </script>

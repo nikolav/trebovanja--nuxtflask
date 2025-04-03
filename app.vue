@@ -7,6 +7,7 @@ const {
   app: { LOGOUT_RELOAD_PATH },
   vars: { FLAG_SHOW_AUTH_BACKGROUND },
   re: { ROUTE_NAMES_SKIP_REDIRECT_APP_ON_AUTHENTICATED },
+  APP_NAME,
 } = useAppConfig();
 
 // ##utils
@@ -38,16 +39,17 @@ useFirebaseCloudMessaging({
 watch(
   () => auth.isAuthenticated$,
   async (isAuthenticated: boolean) => {
-    isAuthenticated
-      ? skipRedirectToAppOnAuthenticated(route.name)
-        ? undefined
-        : await navigateTo({ name: "app" })
-      : reloadNuxtApp({
-          path: LOGOUT_RELOAD_PATH,
-          persistState: false,
-          ttl: 1,
-          // force: true,
-        });
+    if (isAuthenticated) {
+      if (!skipRedirectToAppOnAuthenticated(route.name))
+        await navigateTo({ name: "app" });
+    } else {
+      reloadNuxtApp({
+        path: LOGOUT_RELOAD_PATH,
+        persistState: false,
+        ttl: 1,
+        // force: true,
+      });
+    }
   }
 );
 
@@ -64,7 +66,7 @@ useOnceOn(
 
 // ##head ##meta
 useHead({
-  titleTemplate: (ttl: any) => `${ttl ? ttl + " | " : ""} --app`,
+  titleTemplate: (ttl: any) => `${ttl ? ttl + " • " : ""} ${APP_NAME}`,
 });
 useSeoMeta({
   title: "NuxtApp",
