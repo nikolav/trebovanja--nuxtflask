@@ -2,13 +2,8 @@ import { trimEndBase } from "../utils/trim-end-base";
 import { PRODUCTION$ } from "./vars.env";
 
 export const URL_APP_PUBLIC = PRODUCTION$
-  ? // ? "https://frikom.nikolav.rs/"
-    // "https://qdeiymppite.web.app/"
-    "https://morning-ocean-24984-2ae2dd559da2.herokuapp.com/"
-  : // "http://140.82.39.170/"
-    // "https://nikolav.rs/"
-    // ? "https://qdeiymppite.web.app/"
-    "http://localhost:3000/";
+  ? "https://trebovanja.nikolav.rs/"
+  : "http://localhost:3000/";
 
 const LOGGING_: boolean = true;
 
