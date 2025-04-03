@@ -41,7 +41,7 @@ watch(
   async (isAuthenticated: boolean) => {
     if (isAuthenticated) {
       if (!skipRedirectToAppOnAuthenticated(route.name))
-        await navigateTo({ name: "app" });
+        await navigateTo({ name: "index" });
     } else {
       reloadNuxtApp({
         path: LOGOUT_RELOAD_PATH,
